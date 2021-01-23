@@ -7,7 +7,7 @@ export default Vue.extend({
   mixins: [MixinA, MixinB, MixinC],
    data () {
     return {
-      // @vuese
+      // @hjtvuese
       a: 1
     }
   },
@@ -20,7 +20,7 @@ export default Vue.extend({
     }
   },
   methods: {
-    // @vuese
+    // @hjtvuese
     // Used to manually clear the form
     clear() {
       // Fire when the form is cleared

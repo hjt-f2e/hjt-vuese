@@ -6,7 +6,7 @@
 @Component
 export default class Child extends Vue {
   /**
-   * @vuese
+   * @hjtvuese
    * This is a function exposed as an interface
    * 
    * @arg The first parameter is a Boolean value that represents...

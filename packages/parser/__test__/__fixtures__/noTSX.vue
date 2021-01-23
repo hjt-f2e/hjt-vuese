@@ -6,7 +6,7 @@
 @Component
 // This is a description of the component
 export default class Child extends Vue {
-  // @vuese
+  // @hjtvuese
   public get foo(): number {
     return (<any>this).$refs.navBar.offsetHeight
   }

@@ -6,14 +6,14 @@
 export default {
   data: () => {
     return {
-      // @vuese
+      // @hjtvuese
       // Is a value
       value: 5,
       undocumentedValue: 'string',
-      // @vuese
+      // @hjtvuese
       // Is a string variable
       stringVariable: 'A String',
-      // @vuese
+      // @hjtvuese
       // Is an array variable
       arrayVariable: ['An', 'Array']
     }

@@ -1,5 +1,5 @@
-import Render, { RenderResult, MarkdownResult } from '@vuese/markdown-render'
-import { ParserResult } from '@vuese/parser'
+import Render, { RenderResult, MarkdownResult } from '@hjtvuese/markdown-render'
+import { ParserResult } from '@hjtvuese/parser'
 
 test('Proper rendering of the table header', () => {
   const res: ParserResult = {
@@ -94,7 +94,7 @@ describe('Empty Components (without slots,methods,props,events) can be forced to
     expect(markdownRes).toBeNull()
     expect(renderRes).toEqual({})
   })
-  test('Does render an empty component by with @vuese in the description', () => {
+  test('Does render an empty component by with @hjtvuese in the description', () => {
     const res: ParserResult = {
       name: 'MyComponent',
       componentDesc: {

@@ -5,7 +5,7 @@
 <script>
 export default {
   methods: {
-    // @vuese 
+    // @hjtvuese 
     // Do something
     /**
      * @arg The first parameter is a Boolean value that represents...

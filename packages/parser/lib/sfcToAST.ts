@@ -1,7 +1,7 @@
 // Use vue-template-compiler/build to avoid detection of vue versions
 // in vue-template-compiler/index.js
 import { parseComponent, compile } from 'vue-template-compiler/build'
-import { BabelParserPlugins } from '@vuese/parser'
+import { BabelParserPlugins } from '@hjtvuese/parser'
 import { parse as babelParse } from '@babel/parser'
 import * as bt from '@babel/types'
 import * as path from 'path'

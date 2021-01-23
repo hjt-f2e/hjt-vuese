@@ -6,7 +6,7 @@
 export default {
   computed: {
     /**
-     * @vuese
+     * @hjtvuese
      * Returns filtered paths
      * @type String
      */
@@ -14,7 +14,7 @@ export default {
       return "this might be a string".split('').reverse('').join('')
     },
     /**
-     * @vuese
+     * @hjtvuese
      * Returns filtered paths
      * @type Array
      */

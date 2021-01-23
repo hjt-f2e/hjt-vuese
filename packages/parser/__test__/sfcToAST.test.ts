@@ -1,5 +1,5 @@
 import * as bt from '@babel/types'
-import { sfcToAST, AstResult } from '@vuese/parser'
+import { sfcToAST, AstResult } from '@hjtvuese/parser'
 import * as path from 'path'
 import * as fs from 'fs'
 

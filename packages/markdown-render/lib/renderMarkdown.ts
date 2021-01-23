@@ -1,9 +1,9 @@
 import genMarkdownTpl from './genMarkdownTpl'
-import { ParserResult } from '@vuese/parser'
-import { RenderResult } from '@vuese/markdown-render'
+import { ParserResult } from '@hjtvuese/parser'
+import { RenderResult } from '@hjtvuese/markdown-render'
 
 const nameRE = /\[name\]/g
-const htmlCommentRE = /<!--\s*@vuese:([a-zA-Z_][\w\-\.]*|\[name\]):(\w+):start\s*-->[^]*<!--\s*@vuese:\1:\2:end\s*-->/
+const htmlCommentRE = /<!--\s*@hjtvuese:([a-zA-Z_][\w\-\.]*|\[name\]):(\w+):start\s*-->[^]*<!--\s*@hjtvuese:\1:\2:end\s*-->/
 
 export interface MarkdownResult {
   content: string
@@ -40,15 +40,15 @@ export default function(
       const type = res[2] as keyof RenderResult
       const i = stream.indexOf(matchText)
       const currentHtmlCommentRE = new RegExp(
-        `<!--\\s*@vuese:(${
+        `<!--\\s*@hjtvuese:(${
           compName ? compName : '\\[name\\]'
-        }):(${type}):start\\s*-->[^]*<!--\\s*@vuese:\\1:\\2:end\\s*-->`
+        }):(${type}):start\\s*-->[^]*<!--\\s*@hjtvuese:\\1:\\2:end\\s*-->`
       )
       str = str.replace(currentHtmlCommentRE, (s, c1, c2) => {
         if (renderRes[type]) {
-          let code = `<!-- @vuese:${c1}:${c2}:start -->\n`
+          let code = `<!-- @hjtvuese:${c1}:${c2}:start -->\n`
           code += renderRes[type]
-          code += `\n<!-- @vuese:${c1}:${c2}:end -->\n`
+          code += `\n<!-- @hjtvuese:${c1}:${c2}:end -->\n`
           return code
         }
         return s

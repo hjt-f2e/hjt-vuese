@@ -11,10 +11,10 @@ import {
   ComputedResult,
   WatchResult,
   parseTemplate
-} from '@vuese/parser'
+} from '@hjtvuese/parser'
 import * as path from 'path'
 import * as fs from 'fs'
-import { sfcToAST, AstResult, BabelParserPlugins } from '@vuese/parser'
+import { sfcToAST, AstResult, BabelParserPlugins } from '@hjtvuese/parser'
 import * as bt from '@babel/types'
 import { Seen } from '../lib/seen'
 

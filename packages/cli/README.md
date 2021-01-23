@@ -1,1 +1,1 @@
-# `@vuese/cli`
+# `@hjtvuese/cli`

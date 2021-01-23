@@ -1,4 +1,4 @@
-import { ParserResult } from '@vuese/parser'
+import { ParserResult } from '@hjtvuese/parser'
 
 export default function(parserRes: ParserResult): string {
   const desc = parserRes.componentDesc
@@ -24,8 +24,8 @@ export default function(parserRes: ParserResult): string {
 
 function genBaseTemplate(label: string): string {
   let str = `## ${upper(label)}\n\n`
-  str += `<!-- @vuese:[name]:${label}:start -->\n`
-  str += `<!-- @vuese:[name]:${label}:end -->\n\n`
+  str += `<!-- @hjtvuese:[name]:${label}:start -->\n`
+  str += `<!-- @hjtvuese:[name]:${label}:end -->\n\n`
   return str
 }
 

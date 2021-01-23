@@ -3,7 +3,7 @@ import {
   SlotResult,
   AttrsMap,
   processEmitCallExpression
-} from '@vuese/parser'
+} from '@hjtvuese/parser'
 import { parse as babelParse } from '@babel/parser'
 import { Seen } from './seen'
 

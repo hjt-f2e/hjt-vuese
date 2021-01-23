@@ -4,8 +4,8 @@ import fg from 'fast-glob'
 import fs from 'fs-extra'
 import Log from 'log-horizon'
 import { CliOptions } from '.'
-import { parser } from '@vuese/parser'
-import Render from '@vuese/markdown-render'
+import { parser } from '@hjtvuese/parser'
+import Render from '@hjtvuese/markdown-render'
 
 type MarkdownResult = Promise<
   Promise<

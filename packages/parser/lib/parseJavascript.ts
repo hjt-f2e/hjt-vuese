@@ -11,7 +11,7 @@ import {
   MixInResult,
   SlotResult,
   WatchResult
-} from '@vuese/parser'
+} from '@hjtvuese/parser'
 import { getValueFromGenerate, isVueOption, computesFromStore } from './helper'
 import {
   processPropValue,
@@ -129,7 +129,7 @@ export function parseJavascript(
           const commentsRes: CommentResult = getComments(node)
           const isFromStore: boolean = computesFromStore(node)
 
-          // Collect only computed that have @vuese annotations
+          // Collect only computed that have @hjtvuese annotations
           if (commentsRes.vuese) {
             const result: ComputedResult = {
               name: node.key.name,
@@ -180,7 +180,7 @@ export function parseJavascript(
               return
             }
             const commentsRes: CommentResult = getComments(node)
-            // Collect only data that have @vuese annotations
+            // Collect only data that have @hjtvuese annotations
             if (commentsRes.vuese && bt.isObjectProperty(node)) {
               const result: DataResult = {
                 name: node.key.name,
@@ -204,7 +204,7 @@ export function parseJavascript(
 
         properties.forEach(node => {
           const commentsRes: CommentResult = getComments(node)
-          // Collect only methods that have @vuese annotations
+          // Collect only methods that have @hjtvuese annotations
           if (commentsRes.vuese) {
             const result: MethodResult = {
               name: node.key.name,
@@ -229,7 +229,7 @@ export function parseJavascript(
 
         properties.forEach(node => {
           const commentsRes: CommentResult = getComments(node)
-          // Collect only data that have @vuese annotations
+          // Collect only data that have @hjtvuese annotations
           if (commentsRes.vuese) {
             const result: WatchResult = {
               name: node.key.name,
@@ -272,7 +272,7 @@ export function parseJavascript(
 
             properties.forEach(node => {
               const commentsRes: CommentResult = getComments(node)
-              // Collect only data that have @vuese annotations for backward compability
+              // Collect only data that have @hjtvuese annotations for backward compability
               if (commentsRes.vuese) {
                 const result: DataResult = {
                   name: node.key.name,
@@ -377,7 +377,7 @@ export function parseJavascript(
     ClassMethod(path: NodePath<bt.ClassMethod>): void {
       const node = path.node
       const commentsRes: CommentResult = getComments(node)
-      // Collect only methods that have @vuese annotations
+      // Collect only methods that have @hjtvuese annotations
       if (commentsRes.vuese) {
         const result: MethodResult = {
           name: (node.key as bt.Identifier).name,

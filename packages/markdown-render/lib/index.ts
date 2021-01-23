@@ -8,7 +8,7 @@ import {
   MethodResult,
   ComputedResult,
   WatchResult
-} from '@vuese/parser'
+} from '@hjtvuese/parser'
 import renderMarkdown, { MarkdownResult } from './renderMarkdown'
 
 export { MarkdownResult }

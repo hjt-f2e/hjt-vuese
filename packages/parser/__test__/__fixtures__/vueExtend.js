@@ -1,8 +1,8 @@
 export default Vue.extend({
   mixins: [MixinA, MixinB, MixinC],
-  data () {
+  data() {
     return {
-      // @vuese
+      // @hjtvuese
       a: 1
     }
   },
@@ -11,13 +11,13 @@ export default Vue.extend({
     name: {
       type: [String, Number],
       required: true,
-      validator () { }
+      validator() {}
     }
   },
   methods: {
-    // @vuese
+    // @hjtvuese
     // Used to manually clear the form
-    clear () {
+    clear() {
       // Fire when the form is cleared
       // @arg The argument is a boolean value representing xxx
       this.$emit('onclear', true)

@@ -1,7 +1,7 @@
 import cac from 'cac'
 import JoyCon from 'joycon'
 import fs from 'fs-extra'
-import { BabelParserPlugins } from '@vuese/parser'
+import { BabelParserPlugins } from '@hjtvuese/parser'
 import Log from 'log-horizon'
 import preview from './preview'
 import genDocute from './genDocute'

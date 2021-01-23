@@ -9,7 +9,7 @@ const namedComponent = {
   name: 'compName',
   data() {
     return {
-      // @vuese
+      // @hjtvuese
       a: 1
     }
   },

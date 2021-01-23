@@ -7,7 +7,7 @@ import {
   AstResult,
   SlotResult,
   ParserOptions
-} from '@vuese/parser'
+} from '@hjtvuese/parser'
 import { Seen } from '../lib/seen'
 
 function getAST(fileName: string): AstResult {

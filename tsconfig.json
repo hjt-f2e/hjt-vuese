@@ -20,8 +20,8 @@
     ],
     "rootDir": ".",
     "paths": {
-      "@vuese/parser": ["packages/parser/lib"],
-      "@vuese/markdown-render": ["packages/markdown-render/lib"]
+      "@hjtvuese/parser": ["packages/parser/lib"],
+      "@hjtvuese/markdown-render": ["packages/markdown-render/lib"]
     }
   },
   "include": [

@@ -6,7 +6,7 @@
 export default {
   watch: {
    /**
-     * @vuese
+     * @hjtvuese
      * Stores paths in store
      * @arg val - the value
      */
@@ -14,7 +14,7 @@ export default {
       this.val.doSomething()
     },
     /**
-     * @vuese
+     * @hjtvuese
      * Sets the current page to 1
      * @arg variable - does something
      */
@@ -22,7 +22,7 @@ export default {
       this.otherVariable = variable
     },
     /**
-     * @vuese
+     * @hjtvuese
      * Sets the current page to 1
      */
     noArgument: function() {

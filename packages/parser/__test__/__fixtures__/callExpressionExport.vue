@@ -10,7 +10,7 @@ function callExpression() {
     name: 'compName',
     data() {
       return {
-        // @vuese
+        // @hjtvuese
         a: 1
       }
     },

@@ -1,6 +1,6 @@
 {
-  "name": "@vuese/cli",
-  "version": "2.14.3",
+  "name": "@hjtvuese/cli",
+  "version": "2.14.7",
   "description": "Automatically generate markdown documents based on your vue file",
   "keywords": [
     "markdown",
@@ -13,7 +13,7 @@
   "homepage": "https://github.com/vuese/vuese/tree/master/packages/cli#readme",
   "license": "MIT",
   "bin": {
-    "vuese": "bin/index.js"
+    "hjtvuese": "bin/index.js"
   },
   "files": [
     "dist",
@@ -37,8 +37,8 @@
     "@types/puppeteer-core": "^2.0.0"
   },
   "dependencies": {
-    "@vuese/markdown-render": "^2.11.3",
-    "@vuese/parser": "^2.10.3",
+    "@hjtvuese/markdown-render": "^2.11.5",
+    "@hjtvuese/parser": "^2.10.7",
     "cac": "^6.4.0",
     "chokidar": "^2.0.4",
     "chrome-launcher": "^0.13.4",
