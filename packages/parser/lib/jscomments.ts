@@ -47,11 +47,16 @@ export function getComments(cnode: bt.Node, trailing?: boolean): CommentResult {
         res.default.push(comments)
       }
     } else if (isCommentBlock(node)) {
-      comments = node.value
-        .replace(commentRE, '\n')
-        .replace(/^\*/, '')
-        .split('\n')
-      comments = filterBlockComments(comments)
+      if (node.value.includes('*desc')) {
+        comments = node.value.split('*desc');
+        comments = filterBlockComments(comments);
+      } else {
+        comments = node.value
+          .replace(commentRE, '\n')
+          .replace(/^\*/, '')
+          .split('\n')
+        comments = filterBlockComments(comments)
+      }
       let currentKey = 'default'
       comments.forEach(c => {
         if ((matchs = c.match(leadRE))) {
