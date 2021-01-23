@@ -18,7 +18,7 @@ const joycon = new JoyCon({
   packageKey: 'vuese'
 })
 joycon.addLoader({
-  test: /\.vueserc$/,
+  test: /\.hjtvueserc$/,
   async load(filePath: string) {
     const source = await fs.readFile(filePath, 'utf-8')
     return JSON.parse(source)
@@ -46,8 +46,8 @@ async function getConfig(
   flags: PartialCliOptions
 ): Promise<Partial<CliOptions>> {
   const { path, data } = await joycon.load([
-    'vuese.config.js',
-    '.vueserc',
+    'hjtvuese.config.js',
+    '.hjtvueserc',
     'package.json'
   ])
   const config: PartialCliOptions = {
