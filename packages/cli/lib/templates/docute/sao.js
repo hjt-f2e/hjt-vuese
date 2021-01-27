@@ -5,7 +5,7 @@ module.exports = options => {
   components.forEach(c => {
     const res = {
       title: c.compName,
-      link: '/' + markdownDir + '/' + c.compName
+      link: '/' + markdownDir + '/' + c.compName + '.[' + c.hash + ']'
     }
     if (groupsObjs[c.groupName]) {
       groupsObjs[c.groupName].push(res)

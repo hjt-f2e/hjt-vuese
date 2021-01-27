@@ -78,10 +78,11 @@ export default async (config: CliOptions): MarkdownResult => {
       const folderStructureMiddlePath: string = keepFolderStructure
         ? getGlobPatternMatchPath(include as string[], path.dirname(p))
         : ''
+      const hash = randomStr()
       const target = path.resolve(
         targetDir,
         folderStructureMiddlePath,
-        targetFile + '.md'
+        targetFile + `.[${hash}]` + '.md'
       )
       if (!isPreview) {
         await fs.ensureDir(path.resolve(targetDir, folderStructureMiddlePath))
@@ -92,7 +93,8 @@ export default async (config: CliOptions): MarkdownResult => {
       return {
         compName,
         groupName,
-        content: str
+        content: str,
+        hash
       }
     } catch (e) {
       logger.error(`The error occurred when processing: ${abs}`)
@@ -125,4 +127,9 @@ function explicitPrefix(pattern: string): string {
     resi++
   }
   return patternList.slice(0, resi).join('/')
+}
+
+// 添加随机数算法
+function randomStr(): string {
+  return Math.floor(Math.random() * 1000000).toString(16)
 }
