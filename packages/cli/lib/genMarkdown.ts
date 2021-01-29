@@ -85,7 +85,7 @@ export default async (config: CliOptions): MarkdownResult => {
         targetFile + `.[${hash}]` + '.md'
       )
       if (!isPreview) {
-        await fs.ensureDir(path.resolve(targetDir, folderStructureMiddlePath))
+        await fs.emptyDir(path.resolve(targetDir, folderStructureMiddlePath))
         await fs.writeFile(target, str)
         logger.success(`Successfully created: ${target}`)
       }
