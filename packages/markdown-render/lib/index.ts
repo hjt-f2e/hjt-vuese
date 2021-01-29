@@ -187,7 +187,11 @@ export class Render {
       const row: string[] = []
       for (let i = 0; i < slotConfig.length; i++) {
         if (slotConfig[i] === 'Name') {
-          row.push(slot.name)
+          if (slot.bindings && Object.keys(slot.bindings).length) {
+            row.push(Object.keys(slot.bindings)[0]);
+          } else {
+            row.push(slot.name)
+          }
         } else if (slotConfig[i] === 'Description') {
           if (slot.describe) {
             row.push(slot.describe)

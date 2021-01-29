@@ -1,6 +1,6 @@
 {
   "name": "@hjtvuese/markdown-render",
-  "version": "2.11.5",
+  "version": "2.11.6",
   "description": "Render raw markdown string according to AST",
   "keywords": [
     "markdown",
