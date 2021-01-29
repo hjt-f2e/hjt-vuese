@@ -1,6 +1,6 @@
 {
   "name": "@hjtvuese/cli",
-  "version": "2.14.13",
+  "version": "2.14.14",
   "description": "Automatically generate markdown documents based on your vue file",
   "keywords": [
     "markdown",
