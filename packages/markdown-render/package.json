@@ -7,7 +7,7 @@
     "render",
     "document"
   ],
-  "author": "HcySunYang <HcySunYang@outlook.com>",
+  "author": "young.zhou <small_yangy@foxmail.com>",
   "homepage": "https://github.com/vuese/vuese/tree/master/packages/markdown-render#readme",
   "license": "MIT",
   "main": "dist/index.js",
@@ -20,10 +20,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuese/vuese.git"
+    "url": "git+https://github.com/hjt-f2e/hjt-vuese.git"
   },
   "bugs": {
-    "url": "https://github.com/vuese/vuese/issues"
+    "url": "https://github.com/hjt-f2e/hjt-vuese/issues"
   },
   "buildOptions": {
     "extractDts": true

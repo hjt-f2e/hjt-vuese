@@ -9,7 +9,7 @@
     "document",
     "docute"
   ],
-  "author": "HcySunYang <HcySunYang@outlook.com>",
+  "author": "young.zhou <small_yangy@foxmail.com>",
   "homepage": "https://github.com/vuese/vuese/tree/master/packages/cli#readme",
   "license": "MIT",
   "bin": {
@@ -24,10 +24,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuese/vuese.git"
+    "url": "git+https://github.com/hjt-f2e/hjt-vuese.git"
   },
   "bugs": {
-    "url": "https://github.com/vuese/vuese/issues"
+    "url": "https://github.com/hjt-f2e/hjt-vuese/issues"
   },
   "buildOptions": {
     "extractDts": false

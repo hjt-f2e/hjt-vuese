@@ -1,6 +1,6 @@
 /**
  * Copy from https://github.com/djyde/koy
- * Modified by HcySunYang
+ * Modified by young.zhou
  */
 
 import markded from 'marked'

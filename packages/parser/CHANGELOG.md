@@ -8,4 +8,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* switched to isNumericLiteral(…) ([#117](https://github.com/vuese/vuese/issues/117)) ([96cfa67](https://github.com/vuese/vuese/commit/96cfa67))
+* switched to isNumericLiteral(…) ([#117](https://github.com/hjt-f2e/hjt-vuese/issues/117)) ([96cfa67](https://github.com/vuese/vuese/commit/96cfa67))
