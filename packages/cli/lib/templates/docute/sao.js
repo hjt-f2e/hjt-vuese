@@ -5,7 +5,7 @@ module.exports = options => {
   components.forEach(c => {
     const res = {
       title: c.compName,
-      link: '/' + markdownDir + '/' + c.compName + '.[' + c.hash + ']'
+      link: '/' + markdownDir + '/' + c.compName + '[' + c.hash + ']'
     }
     if (groupsObjs[c.groupName]) {
       groupsObjs[c.groupName].push(res)
@@ -28,7 +28,7 @@ module.exports = options => {
     group.links.sort((a, b) => {
       if (a.title < b.title) return -1
       if (a.title > b.title) return 1
-      return 0;
+      return 0
     })
   })
   const config = {
