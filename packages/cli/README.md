@@ -69,17 +69,14 @@ import xxx from 'xxx';
 export default {}
 ```
 
-![desc使用图例](https://imgcdn.huanjutang.com/file/2021/01/25/222542ef067ea44f9c6c7d5703082255.png)
+![使用图例](https://imgcdn.huanjutang.com/file/2021/01/25/222542ef067ea44f9c6c7d5703082255.png)
 
-```
-
-```
 
 解析后:
 
 ![解析后展示](https://imgcdn.huanjutang.com/file/2021/01/25/fe000454b7bdd40dad4b94f9374dd049.png)
 
-### 2.对生成的md文件添加随机值
+### 2.对生成的md文件添加相对路径标识
 
 解决2个不同位置同名组件覆盖的问题。
 
