@@ -8,7 +8,7 @@
     "document"
   ],
   "author": "young.zhou <small_yangy@foxmail.com>",
-  "homepage": "https://github.com/vuese/vuese/tree/master/packages/parser#readme",
+  "homepage": "https://github.com/hjt-f2e",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

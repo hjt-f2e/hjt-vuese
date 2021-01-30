@@ -1,6 +1,6 @@
 {
   "name": "@hjtvuese/cli",
-  "version": "2.14.16",
+  "version": "2.14.17",
   "description": "Automatically generate markdown documents based on your vue file",
   "keywords": [
     "markdown",
@@ -10,7 +10,7 @@
     "docute"
   ],
   "author": "young.zhou <small_yangy@foxmail.com>",
-  "homepage": "https://github.com/vuese/vuese/tree/master/packages/cli#readme",
+  "homepage": "https://github.com/hjt-f2e",
   "license": "MIT",
   "bin": {
     "hjtvuese": "bin/index.js"
