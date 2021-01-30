@@ -130,8 +130,3 @@ function explicitPrefix(pattern: string): string {
   }
   return patternList.slice(0, resi).join('/')
 }
-
-// 添加随机数算法
-function randomStr(): string {
-  return Math.floor(Math.random() * 1000000).toString(16)
-}
