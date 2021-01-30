@@ -42,6 +42,9 @@ export default async (config: CliOptions): MarkdownResult => {
   const files = await fg(include.concat(exclude.map(p => `!${p}`)))
 
   return files.map(async (p: string) => {
+    const pArr = p.split('\/');
+    pArr.pop();
+    const hash = pArr.join('.');
     const abs = path.resolve(p)
     const source = await fs.readFile(abs, 'utf-8')
     try {
@@ -78,11 +81,10 @@ export default async (config: CliOptions): MarkdownResult => {
       const folderStructureMiddlePath: string = keepFolderStructure
         ? getGlobPatternMatchPath(include as string[], path.dirname(p))
         : ''
-      const hash = randomStr()
       const target = path.resolve(
         targetDir,
         folderStructureMiddlePath,
-        targetFile + `.[${hash}]` + '.md'
+        targetFile + `[${hash}]` + '.md'
       )
       if (!isPreview) {
         await fs.emptyDir(path.resolve(targetDir, folderStructureMiddlePath))
