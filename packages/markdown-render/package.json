@@ -1,6 +1,6 @@
 {
   "name": "@hjtvuese/markdown-render",
-  "version": "2.11.6",
+  "version": "2.11.7",
   "description": "Render raw markdown string according to AST",
   "keywords": [
     "markdown",
@@ -29,7 +29,7 @@
     "extractDts": true
   },
   "devDependencies": {
-    "@hjtvuese/parser": "^2.10.7"
+    "@hjtvuese/parser": "^2.10.8"
   },
   "gitHead": "2bc1b0691aaf9480fa6fc0ad59ff1bc991b81efe"
 }
