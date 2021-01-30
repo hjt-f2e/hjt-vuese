@@ -69,7 +69,7 @@ import xxx from 'xxx';
 export default {}
 ```
 
-![使用图例](https://imgcdn.huanjutang.com/file/2021/01/25/222542ef067ea44f9c6c7d5703082255.png)
+![desc使用图例](https://imgcdn.huanjutang.com/file/2021/01/25/222542ef067ea44f9c6c7d5703082255.png)
 
 ```
 
