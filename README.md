@@ -12,7 +12,7 @@ npm install @hjtvuese/cli -D 或 yarn add @hjtvuese/cli -D
 
 ## 使用
 
-1. 生成文档
+### 生成文档
 
 ```shell
 npx hjtvuese gen
@@ -30,7 +30,7 @@ npx hjtvuese gen
 npm run docs
 ```
 
-2. 使用配置文件
+### 使用配置文件
 
 在根目录创建 .hjtvueserc 或 hjtvuese.config.js
 
@@ -41,6 +41,18 @@ module.exports = {
     exclude: [], // 排除的文件，node_modules已被默认排除
     outDir: './docs', // 文档的输出目录
 }
+```
+
+### 预览组件文档
+
+```shell
+npx hjtvuese serve --open
+```
+
+### 响应式预览单个组件文档
+
+```shell
+npx hjtvuese preview ./src/components/CmpA.vue
 ```
 
 ## 为你的组件编写文档
@@ -81,6 +93,3 @@ export default {}
 解决2个不同位置同名组件覆盖的问题。
 
 生成文件前会先清空存放md文件的文件夹
-
-
-
