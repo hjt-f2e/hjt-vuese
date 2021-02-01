@@ -50,7 +50,7 @@ export default async (config: CliOptions): Promise<void> => {
     const page = pages && pages.length > 0 ? pages[0] : await browser.newPage()
     const filePath = path.join(__dirname, HTML_TPL_FOR_PREVIEW)
     // open the default inner html template
-    await page.goto(encodeURI(`file://${filePath}`))
+    await page.goto(`file://${filePath}`)
 
     // Generate html content for the preview
     const renderer = async (): Promise<void> => {
