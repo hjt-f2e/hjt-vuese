@@ -1,8 +1,9 @@
 import sao from 'sao'
 import path from 'path'
-import genMarkdown from './genMarkdown'
+import genMarkdown, { lastModifyJson } from './genMarkdown'
 import Log from 'log-horizon'
 import { CliOptions } from './'
+import fs from 'fs-extra'
 
 const logger = Log.create()
 
@@ -21,6 +22,8 @@ export default async (config: CliOptions): Promise<void> => {
         markdownDir: config.markdownDir
       }
     })
+    logger.success('lastModify.json Generated successfully')
+    fs.writeJsonSync(path.resolve(config.outDir, 'components/lastModify.json'), lastModifyJson);
     logger.success('Generated successfully')
   } catch (err) {
     console.error(err.name === 'SAOError' ? err.message : err.stack)

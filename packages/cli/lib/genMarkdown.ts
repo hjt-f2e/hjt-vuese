@@ -18,8 +18,12 @@ type MarkdownResult = Promise<
   >[]
 >
 
-const logger = Log.create()
+type modifyJson = {
+  [key: string]: Date
+}
 
+const logger = Log.create()
+export const lastModifyJson: modifyJson = {};
 export default async (config: CliOptions): MarkdownResult => {
   let {
     include,
@@ -33,6 +37,8 @@ export default async (config: CliOptions): MarkdownResult => {
     keepFolderStructure
   } = config
 
+  let lastModify: modifyJson = {};
+
   if (!isPreview) logger.progress('Start creating markdown files...')
 
   if (typeof include === 'string') include = [include]
@@ -40,6 +46,13 @@ export default async (config: CliOptions): MarkdownResult => {
   exclude = exclude.concat('node_modules/**/*.(vue|js)')
 
   const files = await fg(include.concat(exclude.map(p => `!${p}`)))
+
+  // lastModify记录文件是否存在
+  const lastModifyExist = fs.pathExistsSync(path.resolve(outDir, 'components/lastModify.json'));
+  if (lastModifyExist) {
+      // 记录文件存在
+      lastModify = fs.readJsonSync(path.resolve(outDir, 'components/lastModify.json'));
+  }
 
   return files.map(async (p: string) => {
     const pArr = p.split('\/');
@@ -87,9 +100,17 @@ export default async (config: CliOptions): MarkdownResult => {
         targetFile + `[${hash}]` + '.md'
       )
       if (!isPreview) {
-        await fs.emptyDir(path.resolve(targetDir, folderStructureMiddlePath))
-        await fs.writeFile(target, str)
-        logger.success(`Successfully created: ${target}`)
+        // 存储last-modify记录
+        const pInfo = await fs.stat(abs)
+        lastModifyJson[targetFile + `[${hash}]`] = pInfo.mtime
+        await fs.ensureDir(path.resolve(targetDir, folderStructureMiddlePath))
+        if (!lastModifyExist || new Date(lastModify[targetFile + `[${hash}]`]) < pInfo.mtime) {
+          // 如果lastmodify文件不存在||最后修改时间小于当前文件的修改时间，重新生成
+          await fs.writeFile(target, str)
+          logger.success(`Successfully created: ${target}`)
+        } else {
+          logger.success(`Not modify: ${target}`);
+        }
       }
 
       return {

@@ -69,7 +69,7 @@ npx hjtvuese preview ./src/components/CmpA.vue
 
 ```js
 import xxx from 'xxx';
-/* *desc
+/**desc
 
 ## 组件描述
 
@@ -92,4 +92,6 @@ export default {}
 
 解决2个不同位置同名组件覆盖的问题。
 
-生成文件前会先清空存放md文件的文件夹
+### 3.增量更新
+
+组件文件未修改，不会再重新生成md文件
