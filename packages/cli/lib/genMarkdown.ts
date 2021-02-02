@@ -57,6 +57,7 @@ export default async (config: CliOptions): MarkdownResult => {
   return files.map(async (p: string) => {
     const pArr = p.split('\/');
     pArr.pop();
+    if (pArr[0] === '.') pArr.shift();
     const hash = pArr.join('.');
     const abs = path.resolve(p)
     const source = await fs.readFile(abs, 'utf-8')
@@ -104,7 +105,7 @@ export default async (config: CliOptions): MarkdownResult => {
         const pInfo = await fs.stat(abs)
         lastModifyJson[targetFile + `[${hash}]`] = pInfo.mtime
         await fs.ensureDir(path.resolve(targetDir, folderStructureMiddlePath))
-        if (!lastModifyExist || new Date(lastModify[targetFile + `[${hash}]`]) < pInfo.mtime) {
+        if (!lastModifyExist || !lastModify[targetFile + `[${hash}]`] || new Date(lastModify[targetFile + `[${hash}]`]) < pInfo.mtime) {
           // 如果lastmodify文件不存在||最后修改时间小于当前文件的修改时间，重新生成
           await fs.writeFile(target, str)
           logger.success(`Successfully created: ${target}`)
